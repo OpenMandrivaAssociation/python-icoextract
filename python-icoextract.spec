@@ -36,6 +36,9 @@ find . -name \*.py -exec sed -i -e '1{\@^#!%{_bindir}/env python@d}' '{}' \;
 %install
 %py_install
 
+mkdir -p %{buildroot}%{_datadir}/thumbnailers/
+cp exe-thumbnailer.thumbnailer %{buildroot}%{_datadir}/thumbnailers/
+
 %files
 %{_bindir}/exe-thumbnailer
 %{_bindir}/icoextract
