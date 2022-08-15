@@ -1,1 +1,39 @@
+Name:           python-icoextract
+Version:        0.1.4
+Release:        1
+Summary:        Extract icons from Windows PE files (.exe/.dll)
+License:        MIT
+Group:          System/GUI/Other
+URL:            https://github.com/jlu5/icoextract
+Source:         https://github.com/jlu5/icoextract/archive/%{version}/icoextract-%{version}.tar.gz
 
+#BuildRequires:  python3dist(pefile)
+BuildRequires:  python3dist(pillow)
+BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(wheel)
+BuildRequires:  ImageMagick
+BuildRequires:  cmake
+
+Requires:  python3dist(pefile)
+Requires:  python3dist(pillow)
+
+BuildArch:      noarch
+
+%description
+icoextract is an icon extractor for Windows PE files (.exe/.dll), written in
+Python. It also includes a thumbnailer script (exe-thumbnailer) for Linux
+desktops.
+
+%prep
+%setup -q -n icoextract-%{version}
+
+find . -name \*.py -exec sed -i -e '1{\@^#!%{_bindir}/env python@d}' '{}' \;
+
+%build
+%py_build
+
+%install
+%py_install
+
+%files
