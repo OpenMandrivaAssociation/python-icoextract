@@ -12,7 +12,7 @@ BuildRequires:  python3dist(pillow)
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(wheel)
-BuildRequires:  ImageMagick
+BuildRequires:  imagemagick
 BuildRequires:  cmake
 
 Requires:  python3dist(pefile)
