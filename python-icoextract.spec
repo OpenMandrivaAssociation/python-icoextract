@@ -7,7 +7,7 @@ Group:          System/GUI/Other
 URL:            https://github.com/jlu5/icoextract
 Source:         https://github.com/jlu5/icoextract/archive/%{version}/icoextract-%{version}.tar.gz
 
-#BuildRequires:  python3dist(pefile)
+BuildRequires:  python3dist(pefile)
 BuildRequires:  python3dist(pillow)
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools)
