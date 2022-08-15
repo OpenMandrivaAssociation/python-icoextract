@@ -26,7 +26,7 @@ Python. It also includes a thumbnailer script (exe-thumbnailer) for Linux
 desktops.
 
 %prep
-%setup -q -n icoextract-%{version}
+%autosetup -n icoextract-%{version} -p1
 
 find . -name \*.py -exec sed -i -e '1{\@^#!%{_bindir}/env python@d}' '{}' \;
 
@@ -37,3 +37,8 @@ find . -name \*.py -exec sed -i -e '1{\@^#!%{_bindir}/env python@d}' '{}' \;
 %py_install
 
 %files
+%{_bindir}/exe-thumbnailer
+%{_bindir}/icoextract
+%{_bindir}/icolist
+%{python_sitelib}/icoextract-%{version}-py*.*.egg-info
+%{python_sitelib}/icoextract/
