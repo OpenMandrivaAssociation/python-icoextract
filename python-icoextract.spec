@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 Name:           python-icoextract
 Version:        0.1.5
 Release:        1
