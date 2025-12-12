@@ -2,7 +2,7 @@
 
 Name:           python-icoextract
 Version:        0.1.5
-Release:        1
+Release:        2
 Summary:        Extract icons from Windows PE files (.exe/.dll)
 License:        MIT
 Group:          System/GUI/Other
