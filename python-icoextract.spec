@@ -1,8 +1,8 @@
 %define _empty_manifest_terminate_build 0
 
 Name:           python-icoextract
-Version:        0.1.5
-Release:        2
+Version:        0.3.0
+Release:        1
 Summary:        Extract icons from Windows PE files (.exe/.dll)
 License:        MIT
 Group:          System/GUI/Other
@@ -28,7 +28,7 @@ Python. It also includes a thumbnailer script (exe-thumbnailer) for Linux
 desktops.
 
 %prep
-%autosetup -n icoextract-%{version} -p1
+%autosetup -n icoextract-0.3.0 -p1
 
 find . -name \*.py -exec sed -i -e '1{\@^#!%{_bindir}/env python@d}' '{}' \;
 
