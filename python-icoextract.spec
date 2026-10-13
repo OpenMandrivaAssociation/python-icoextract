@@ -9,16 +9,16 @@ Group:          System/GUI/Other
 URL:            https://github.com/jlu5/icoextract
 Source:         https://github.com/jlu5/icoextract/archive/%{version}/icoextract-%{version}.tar.gz
 
-BuildRequires:  python3dist(pefile)
-BuildRequires:  python3dist(pillow)
-BuildRequires:  python3dist(pip)
-BuildRequires:  python3dist(setuptools)
-BuildRequires:  python3dist(wheel)
+BuildRequires:  python%{pyver}dist(pefile)
+BuildRequires:  python%{pyver}dist(pillow)
+BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(wheel)
 BuildRequires:  imagemagick
 BuildRequires:  cmake
 
-Requires:  python3dist(pefile)
-Requires:  python3dist(pillow)
+Requires:  python%{pyver}dist(pefile)
+Requires:  python%{pyver}dist(pillow)
 
 BuildArch:      noarch
 
@@ -28,7 +28,7 @@ Python. It also includes a thumbnailer script (exe-thumbnailer) for Linux
 desktops.
 
 %prep
-%autosetup -n icoextract-0.3.0 -p1
+%autosetup -n icoextract-%{version} -p1
 
 find . -name \*.py -exec sed -i -e '1{\@^#!%{_bindir}/env python@d}' '{}' \;
 
