@@ -46,5 +46,5 @@ cp exe-thumbnailer.thumbnailer %{buildroot}%{_datadir}/thumbnailers/
 %{_bindir}/icoextract
 %{_bindir}/icolist
 %{_datadir}/thumbnailers/exe-thumbnailer.thumbnailer
-%{python_sitelib}/icoextract-%{version}-py*.*.egg-info
+%{python_sitelib}/icoextract-%{version}.dist-info
 %{python_sitelib}/icoextract/
